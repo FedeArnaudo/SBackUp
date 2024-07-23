@@ -16,13 +16,28 @@ using System.Windows.Shapes;
 namespace SBackUp
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for InitBackUp.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class InitBackUp : Window
     {
-        public MainWindow()
+        public InitBackUp()
         {
             InitializeComponent();
+        }
+
+        private void Crear_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Editar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Eliminar_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

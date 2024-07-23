@@ -6,12 +6,15 @@ using System.Threading.Tasks;
 
 namespace SBackUp
 {
-    internal class Compressor
+    internal class Robocopy
     {
-        public Compressor() { }
-        public bool Compress()
+        public Robocopy()
         {
-            return false;
+
+        }
+        public string GetComand()
+        {
+            return null;
         }
     }
 }

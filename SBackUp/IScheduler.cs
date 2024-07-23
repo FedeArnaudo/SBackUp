@@ -10,5 +10,8 @@ namespace SBackUp
     internal interface IScheduler
     {
         Trigger FrecuencyTask();
+        int Seconds { get; set; }
+        int Minutes { get; set; }
+        int Hours { get; set; }
     }
 }

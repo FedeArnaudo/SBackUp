@@ -60,6 +60,7 @@
     <Compile Include="Daily.cs" />
     <Compile Include="IScheduler.cs" />
     <Compile Include="Monthly.cs" />
+    <Compile Include="Robocopy.cs" />
     <Compile Include="Task.cs" />
     <Compile Include="TaskManager.cs" />
     <Compile Include="Weekly.cs" />

@@ -48,7 +48,7 @@ namespace SBackUp {
         public void InitializeComponent() {
             
             #line 5 "..\..\App.xaml"
-            this.StartupUri = new System.Uri("MainWindow.xaml", System.UriKind.Relative);
+            this.StartupUri = new System.Uri("InitBackUp.xaml", System.UriKind.Relative);
             
             #line default
             #line hidden
