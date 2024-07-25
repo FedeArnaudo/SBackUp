@@ -8,14 +8,13 @@ namespace SBackUp
 {
     internal class Task
     {
-        private IScheduler scheduler;
-        private BackUp backUp;
-        private Compressor compressor;
         public Task()
         {
 
         }
         public IScheduler Scheduler { get; set; }
+        public Robocopy Robocopy { get; set; }
+        public Compressor Compressor { get; set; }
         public void StartTask()
         {
 
