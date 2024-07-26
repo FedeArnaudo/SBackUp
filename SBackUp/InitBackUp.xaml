@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SBackUp"
-        mc:Ignorable="d"
+        mc:Ignorable="d" ResizeMode="CanMinimize"
         Title="SIGES Back-Up" Height="550" Width="600">
     <Window.Resources>
         <!--#region ButtonStle-->
@@ -66,7 +66,7 @@
         <!--#endregion-->
     </Window.Resources>
     <Border Background="#D6E2E8">
-        <Grid x:Name="GriInicio" >
+        <Grid x:Name="InicioGrid">
             <!--#region COLS and ROWS-->
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="10"></ColumnDefinition>
@@ -135,6 +135,11 @@
                     </Style>
                 </DataGrid.RowStyle>
             </DataGrid>
+            <!--#endregion-->
+            <!--#region STACK_PANEL-->
+            <StackPanel Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="5">
+                <Frame x:Name="FramePage" NavigationUIVisibility="Hidden"></Frame>
+            </StackPanel>
             <!--#endregion-->
         </Grid>
     </Border>

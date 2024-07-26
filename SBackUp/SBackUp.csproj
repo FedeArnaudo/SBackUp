@@ -56,6 +56,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Compressor.cs" />
+    <Compile Include="CreatePage.xaml.cs">
+      <DependentUpon>CreatePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Daily.cs" />
     <Compile Include="IScheduler.cs" />
     <Compile Include="Monthly.cs" />
@@ -63,6 +66,10 @@
     <Compile Include="Task.cs" />
     <Compile Include="TaskManager.cs" />
     <Compile Include="Weekly.cs" />
+    <Page Include="CreatePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="InitBackUp.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

@@ -16,28 +16,18 @@ using System.Windows.Shapes;
 namespace SBackUp
 {
     /// <summary>
-    /// Interaction logic for InitBackUp.xaml
+    /// Lógica de interacción para CreatePage.xaml
     /// </summary>
-    public partial class InitBackUp : Window
+    public partial class CreatePage : Page
     {
-        public InitBackUp()
+        public CreatePage()
         {
             InitializeComponent();
         }
 
-        private void Crear_Click(object sender, RoutedEventArgs e)
+        private void CloseCreatPage_Click(object sender, RoutedEventArgs e)
         {
-            _ = FramePage.NavigationService.Navigate(new CreatePage());
-        }
-
-        private void Editar_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Eliminar_Click(object sender, RoutedEventArgs e)
-        {
-
+            _ = CloseCreatPage;
         }
     }
 }

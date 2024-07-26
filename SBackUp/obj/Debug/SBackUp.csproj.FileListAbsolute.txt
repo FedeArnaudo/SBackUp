@@ -1,0 +1,17 @@
+C:\Users\Fde\Documents\C#\SBackUp\SBackUp\bin\Debug\SBackUp.exe.config
+C:\Users\Fde\Documents\C#\SBackUp\SBackUp\bin\Debug\SBackUp.exe
+C:\Users\Fde\Documents\C#\SBackUp\SBackUp\bin\Debug\SBackUp.pdb
+C:\Users\Fde\Documents\C#\SBackUp\SBackUp\obj\Debug\SBackUp.csproj.AssemblyReference.cache
+C:\Users\Fde\Documents\C#\SBackUp\SBackUp\obj\Debug\CreatePage.g.cs
+C:\Users\Fde\Documents\C#\SBackUp\SBackUp\obj\Debug\InitBackUp.g.cs
+C:\Users\Fde\Documents\C#\SBackUp\SBackUp\obj\Debug\App.g.cs
+C:\Users\Fde\Documents\C#\SBackUp\SBackUp\obj\Debug\SBackUp_MarkupCompile.cache
+C:\Users\Fde\Documents\C#\SBackUp\SBackUp\obj\Debug\SBackUp_MarkupCompile.lref
+C:\Users\Fde\Documents\C#\SBackUp\SBackUp\obj\Debug\CreatePage.baml
+C:\Users\Fde\Documents\C#\SBackUp\SBackUp\obj\Debug\InitBackUp.baml
+C:\Users\Fde\Documents\C#\SBackUp\SBackUp\obj\Debug\SBackUp.g.resources
+C:\Users\Fde\Documents\C#\SBackUp\SBackUp\obj\Debug\SBackUp.Properties.Resources.resources
+C:\Users\Fde\Documents\C#\SBackUp\SBackUp\obj\Debug\SBackUp.csproj.GenerateResource.cache
+C:\Users\Fde\Documents\C#\SBackUp\SBackUp\obj\Debug\SBackUp.csproj.CoreCompileInputs.cache
+C:\Users\Fde\Documents\C#\SBackUp\SBackUp\obj\Debug\SBackUp.exe
+C:\Users\Fde\Documents\C#\SBackUp\SBackUp\obj\Debug\SBackUp.pdb
