@@ -27,7 +27,19 @@ namespace SBackUp
 
         private void Crear_Click(object sender, RoutedEventArgs e)
         {
-            _ = FramePage.NavigationService.Navigate(new CreatePage());
+            CreateWindows createWindows = new CreateWindows
+            {
+                Owner = this
+            };
+            createWindows.Closed += CreateWindows_Closed;
+            createWindows.Show();
+            Hide();
+        }
+        private void CreateWindows_Closed(object sender, EventArgs e)
+        {
+            IsEnabled = true;
+            Show();
+            _ = Activate();
         }
 
         private void Editar_Click(object sender, RoutedEventArgs e)

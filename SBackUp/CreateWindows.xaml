@@ -1,0 +1,212 @@
+﻿<Window x:Class="SBackUp.CreateWindows"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SBackUp"
+        mc:Ignorable="d" WindowStyle="None" ResizeMode="CanMinimize"
+        Title="CreateWindows" Height="550" Width="595" MouseDown="Window_MouseDown">
+    <Window.Resources>
+        <!--#region ButtonStle-->
+        <Style x:Key="FocusVisual">
+            <Setter Property="Control.Template">
+                <Setter.Value>
+                    <ControlTemplate>
+                        <Rectangle Margin="2" SnapsToDevicePixels="true" Stroke="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" StrokeThickness="1" StrokeDashArray="1 2"/>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <SolidColorBrush x:Key="Button.Static.Background" Color="#FFDDDDDD"/>
+        <SolidColorBrush x:Key="Button.Static.Border" Color="#FF707070"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FFBEE6FD"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF3C7FB1"/>
+        <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FFC4E5F6"/>
+        <SolidColorBrush x:Key="Button.Pressed.Border" Color="#FF2C628B"/>
+        <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
+        <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
+        <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
+        <Style x:Key="ButtonStyle" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisual}"/>
+            <Setter Property="Background" Value="{StaticResource Button.Static.Background}"/>
+            <Setter Property="BorderBrush" Value="{StaticResource Button.Static.Border}"/>
+            <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="1"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+                            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsDefaulted" Value="true">
+                                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="#0070AC"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="#0070AC"/>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="true">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Pressed.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Pressed.Border}"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Background" TargetName="border" Value="{StaticResource Button.Disabled.Background}"/>
+                                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource Button.Disabled.Border}"/>
+                                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource Button.Disabled.Foreground}"/>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <!--#endregion-->
+    </Window.Resources>
+    <Border x:Name="BorderCreate" Background="#C5DFFF">
+        <Grid x:Name="CreateGrid">
+            <!--#region COLS and ROWS-->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="25"></ColumnDefinition>
+                <ColumnDefinition Width="545"></ColumnDefinition>
+                <ColumnDefinition Width="25"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"></RowDefinition>
+                <RowDefinition Height="10"></RowDefinition>
+                <RowDefinition Height="240"></RowDefinition>
+                <RowDefinition Height="10"></RowDefinition>
+                <RowDefinition Height="240"></RowDefinition>
+                <RowDefinition Height="20"></RowDefinition>
+            </Grid.RowDefinitions>
+            <!--#endregion-->
+            <Grid Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3"
+                  x:Name="GridMargin" Background="#507ED6"
+                  Width="595"
+                  HorizontalAlignment="Center">
+                <!--#region Buttons-->
+                <Button Name="CloseWindowsCreate" Margin="0, 0, 5, 0" Grid.Column="2"
+                    Width="25" Height="25" Background="#1B1448" BorderBrush="#007ED6"
+                    HorizontalAlignment="Right" VerticalAlignment="Center"
+                    Style="{DynamicResource ButtonStyle}" Click="CloseWindowsCreate_Click">
+                    <TextBlock Text="X" Foreground="White" FontSize="13"></TextBlock>
+                </Button>
+                <!--#endregion-->
+                <!--#region TextBlock-->
+                <TextBlock Text="Creando Tarea de respaldo" Foreground="Black"
+                           FontSize="17" FontFamily="Montserrat"
+                           VerticalAlignment="Center" HorizontalAlignment="Left"
+                           Height="20" Width="200" Margin="25,0,0,0"></TextBlock>
+                <!--#endregion-->
+            </Grid>
+            <Border Grid.Row="2" Grid.Column="1"
+                    BorderThickness="5" BorderBrush="AliceBlue">
+                <Grid x:Name="GridConfiguracion1">
+                    <!--#region TextBlock-->
+                    <TextBlock Text="Descripcion" Foreground="Black"
+                           FontSize="15" FontFamily="Montserrat"
+                           VerticalAlignment="Top" HorizontalAlignment="Center"
+                           Height="20" Width="90" Margin="5,30,350,0"></TextBlock>
+                    <TextBlock Text="Fuente" Foreground="Black"
+                           FontSize="15" FontFamily="Montserrat"
+                           VerticalAlignment="Top" HorizontalAlignment="Center"
+                           Height="20" Width="90" Margin="5,60,350,0"></TextBlock>
+                    <TextBlock Text="Destino" Foreground="Black"
+                           FontSize="15" FontFamily="Montserrat"
+                           VerticalAlignment="Top" HorizontalAlignment="Center"
+                           Height="20" Width="90" Margin="5,90,350,0"></TextBlock>
+                    <!--#endregion-->
+                    <!--#region TextBox-->
+                    <TextBox x:Name="TextBoxDescripcion"
+                         TextAlignment="Left" Background="Transparent" BorderBrush="#007ED6" FontSize="14"
+                         HorizontalAlignment="Center" VerticalAlignment="Top"
+                         Width="250" Height="20"
+                         Margin="0, 30, 0, 0" Text=""></TextBox>
+                    <TextBox x:Name="TextBoxFuente"
+                         TextAlignment="Left" Background="Transparent" BorderBrush="#007ED6" FontSize="14"
+                         HorizontalAlignment="Center" VerticalAlignment="Top"
+                         Width="250" Height="20"
+                         Margin="0, 60, 0, 0" Text=""></TextBox>
+                    <TextBox x:Name="TextBoxDestino"
+                         TextAlignment="Left" Background="Transparent" BorderBrush="#007ED6" FontSize="14"
+                         HorizontalAlignment="Center" VerticalAlignment="Top"
+                         Width="250" Height="20"
+                         Margin="0, 90, 0, 0" Text=""></TextBox>
+                    <!--#endregion-->
+                    <!--#region btnConfig-->
+                    <Button Name="BtnBuscar1" Grid.Row="2" Grid.Column="2"
+                        Background="#007ED6" BorderBrush="#007ED6"
+                        HorizontalAlignment="Right" VerticalAlignment="Top"
+                        Width="50" Height="20" 
+                        Margin="0, 60, 70, 0"
+                        Style="{DynamicResource ButtonStyle}" Click="BtnBuscar1_Click">
+                        <TextBlock Text="Buscar" Foreground="White" FontSize="13"></TextBlock>
+                    </Button>
+                    <Button Name="BtnBuscar2" Grid.Row="2" Grid.Column="2"
+                        Background="#007ED6" BorderBrush="#007ED6"
+                        HorizontalAlignment="Right" VerticalAlignment="Top"
+                        Width="50" Height="20" 
+                        Margin="0, 90, 70, 0"
+                        Style="{DynamicResource ButtonStyle}" Click="BtnBuscar2_Click">
+                        <TextBlock Text="Buscar" Foreground="White" FontSize="13"></TextBlock>
+                    </Button>
+                    <!--#endregion-->
+                </Grid>
+            </Border>
+            <Grid x:Name="GridConfiguracion2" Grid.Row="4" Grid.Column="1">
+                <!--#region COLS and ROWS-->
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <!--#endregion-->
+                <Border Grid.Column="0"
+                        BorderThickness="5" BorderBrush="AliceBlue">
+                    <Grid>
+                        <!--#region TextBlock-->
+                        <TextBlock Grid.Column="0"
+                               Text="Período de Ejecución" Foreground="Black"
+                               FontSize="17" FontFamily="Montserrat"
+                               VerticalAlignment="Top" HorizontalAlignment="Left"
+                               Height="20" Width="160" Margin="60, 30, 0, 0" TextDecorations="Underline"></TextBlock>
+                        <TextBlock Grid.Column="0"
+                               Text="Diario" Foreground="Black"
+                               FontSize="15" FontFamily="Montserrat"
+                               VerticalAlignment="Top" HorizontalAlignment="Left"
+                               Height="20" Width="90" Margin="80, 67, 0, 0"></TextBlock>
+                        <TextBlock Grid.Column="0"
+                               Text="Semanal" Foreground="Black"
+                               FontSize="15" FontFamily="Montserrat"
+                               VerticalAlignment="Top" HorizontalAlignment="Left"
+                               Height="20" Width="90" Margin="80, 97, 0, 0"></TextBlock>
+                        <TextBlock Grid.Column="0"
+                               Text="Mensual" Foreground="Black"
+                               FontSize="15" FontFamily="Montserrat"
+                               VerticalAlignment="Top" HorizontalAlignment="Left"
+                               Height="20" Width="90" Margin="80, 127, 0, 0"></TextBlock>
+                        <!--#endregion-->
+                        <!--#region CheckBox-->
+                        <CheckBox Grid.Column="0" Name="CheckBoxDiario" IsChecked="False"
+                      VerticalAlignment="Top" HorizontalAlignment="Center" Margin="100, 70, 0, 0"
+                      Checked="CheckBoxProtocol16_Checked" Unchecked="CheckBoxProtocol16_Unchecked"></CheckBox>
+                        <CheckBox Grid.Column="0" Name="CheckBoxSemanal" IsChecked="False"
+                      VerticalAlignment="Top" HorizontalAlignment="Center" Margin="100, 100, 0, 0"
+                      Checked="CheckBoxProtocol32_Checked" Unchecked="CheckBoxProtocol32_Unchecked"></CheckBox>
+                        <CheckBox Grid.Column="0" Name="CheckBoxMensual" IsChecked="False"
+                      VerticalAlignment="Top" HorizontalAlignment="Center" Margin="100, 130, 0, 0"
+                      Checked="CheckBoxProtocol32_Checked" Unchecked="CheckBoxProtocol32_Unchecked"></CheckBox>
+                        <!--#endregion-->
+                    </Grid>
+                </Border>
+                <Border Grid.Column="1"
+                        BorderThickness="5" BorderBrush="AliceBlue">
+                    <Grid>
+
+                    </Grid>
+                </Border>
+            </Grid>
+        </Grid>
+    </Border>
+</Window>

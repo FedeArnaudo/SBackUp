@@ -37,6 +37,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -56,8 +57,8 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Compressor.cs" />
-    <Compile Include="CreatePage.xaml.cs">
-      <DependentUpon>CreatePage.xaml</DependentUpon>
+    <Compile Include="CreateWindows.xaml.cs">
+      <DependentUpon>CreateWindows.xaml</DependentUpon>
     </Compile>
     <Compile Include="Daily.cs" />
     <Compile Include="IScheduler.cs" />
@@ -66,7 +67,7 @@
     <Compile Include="Task.cs" />
     <Compile Include="TaskManager.cs" />
     <Compile Include="Weekly.cs" />
-    <Page Include="CreatePage.xaml">
+    <Page Include="CreateWindows.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

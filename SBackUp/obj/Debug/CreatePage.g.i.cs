@@ -41,7 +41,7 @@ namespace SBackUp {
     public partial class CreatePage : System.Windows.Controls.Page, System.Windows.Markup.IComponentConnector {
         
         
-        #line 69 "..\..\CreatePage.xaml"
+        #line 13 "..\..\CreatePage.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Grid CreateGrid;
         
@@ -49,7 +49,7 @@ namespace SBackUp {
         #line hidden
         
         
-        #line 85 "..\..\CreatePage.xaml"
+        #line 29 "..\..\CreatePage.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Grid GridMargin;
         
@@ -57,7 +57,7 @@ namespace SBackUp {
         #line hidden
         
         
-        #line 93 "..\..\CreatePage.xaml"
+        #line 37 "..\..\CreatePage.xaml"
         [System.Diagnostics.CodeAnalysis.SuppressMessageAttribute("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
         internal System.Windows.Controls.Button CloseCreatPage;
         
@@ -103,7 +103,7 @@ namespace SBackUp {
             case 3:
             this.CloseCreatPage = ((System.Windows.Controls.Button)(target));
             
-            #line 96 "..\..\CreatePage.xaml"
+            #line 40 "..\..\CreatePage.xaml"
             this.CloseCreatPage.Click += new System.Windows.RoutedEventHandler(this.CloseCreatPage_Click);
             
             #line default

@@ -136,11 +136,6 @@
                 </DataGrid.RowStyle>
             </DataGrid>
             <!--#endregion-->
-            <!--#region STACK_PANEL-->
-            <StackPanel Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="3" Grid.RowSpan="5">
-                <Frame x:Name="FramePage" NavigationUIVisibility="Hidden"></Frame>
-            </StackPanel>
-            <!--#endregion-->
         </Grid>
     </Border>
 </Window>
