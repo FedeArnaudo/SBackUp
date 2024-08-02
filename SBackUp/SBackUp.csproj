@@ -61,13 +61,26 @@
       <DependentUpon>CreateWindows.xaml</DependentUpon>
     </Compile>
     <Compile Include="Daily.cs" />
+    <Compile Include="DailyPage.xaml.cs">
+      <DependentUpon>DailyPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="IScheduler.cs" />
+    <Compile Include="MonthlyPage.xaml.cs">
+      <DependentUpon>MonthlyPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WeeklyPage.xaml.cs">
+      <DependentUpon>WeeklyPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Monthly.cs" />
     <Compile Include="Robocopy.cs" />
     <Compile Include="Task.cs" />
     <Compile Include="TaskManager.cs" />
     <Compile Include="Weekly.cs" />
     <Page Include="CreateWindows.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="DailyPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -83,6 +96,14 @@
       <DependentUpon>InitBackUp.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MonthlyPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WeeklyPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">

@@ -12,6 +12,8 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using CheckBox = System.Windows.Controls.CheckBox;
+using MessageBox = System.Windows.MessageBox;
 
 namespace SBackUp
 {
@@ -20,9 +22,11 @@ namespace SBackUp
     /// </summary>
     public partial class CreateWindows : Window
     {
+        private Page page = new Page();
         public CreateWindows()
         {
             InitializeComponent();
+            CheckBoxDiario.IsChecked = true;
         }
 
         private void CloseWindowsCreate_Click(object sender, RoutedEventArgs e)
@@ -60,6 +64,75 @@ namespace SBackUp
                 folderPath = folderBrowserDialog.SelectedPath;
             }
             return folderPath;
+        }
+        private void CheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+            if (sender is CheckBox checkBox)
+            {
+                // Uncheck all other checkboxes
+                if (checkBox != CheckBoxDiario)
+                {
+                    CheckBoxDiario.IsChecked = false;
+                }
+
+                if (checkBox != CheckBoxSemanal)
+                {
+                    CheckBoxSemanal.IsChecked = false;
+                }
+
+                if (checkBox != CheckBoxMensual)
+                {
+                    CheckBoxMensual.IsChecked = false;
+                }
+
+                // Load the corresponding page into the frame
+                if (checkBox == CheckBoxDiario)
+                {
+                    page = new DailyPage();
+                    _ = FramePage.Navigate(page);
+                }
+                else if (checkBox == CheckBoxSemanal)
+                {
+                    page = new WeeklyPage();
+                    _ = FramePage.Navigate(page);
+                }
+                else if (checkBox == CheckBoxMensual)
+                {
+                    page = new MonthlyPage();
+                    _ = FramePage.Navigate(page);
+                }
+            }
+        }
+
+        private void CheckBox_Unchecked(object sender, RoutedEventArgs e)
+        {
+            // Optionally clear the frame if no checkbox is checked
+            if (!CheckBoxDiario.IsChecked.GetValueOrDefault() &&
+                !CheckBoxSemanal.IsChecked.GetValueOrDefault() &&
+                !CheckBoxMensual.IsChecked.GetValueOrDefault())
+            {
+                FramePage.Content = null;
+            }
+        }
+
+        private void Crear_Click(object sender, RoutedEventArgs e)
+        {
+            if (CheckBoxDiario.IsChecked == true)
+            {
+                _ = MessageBox.Show($"Tarea de mantenimiento diario");
+            }
+            else if (CheckBoxSemanal.IsChecked == true)
+            {
+                _ = MessageBox.Show("Tarea de mantenimiento semanal");
+            }
+            else if(CheckBoxMensual.IsChecked == true)
+            {
+                _ = MessageBox.Show("Tarea de mantenimiento mensual");
+            }
+            else
+            {
+                _ = MessageBox.Show("Debe seleccionar un período de ejecución");
+            }
         }
     }
 }

@@ -167,44 +167,58 @@
                     <Grid>
                         <!--#region TextBlock-->
                         <TextBlock Grid.Column="0"
-                               Text="Período de Ejecución" Foreground="Black"
-                               FontSize="17" FontFamily="Montserrat"
-                               VerticalAlignment="Top" HorizontalAlignment="Left"
-                               Height="20" Width="160" Margin="60, 30, 0, 0" TextDecorations="Underline"></TextBlock>
+                                   Text="Período de Ejecución" Foreground="Black" TextDecorations="Underline"
+                                   FontSize="17" FontFamily="Montserrat"
+                                   VerticalAlignment="Top" HorizontalAlignment="Left"
+                                   Height="20" Width="160" Margin="60, 30, 0, 0"></TextBlock>
                         <TextBlock Grid.Column="0"
-                               Text="Diario" Foreground="Black"
-                               FontSize="15" FontFamily="Montserrat"
-                               VerticalAlignment="Top" HorizontalAlignment="Left"
-                               Height="20" Width="90" Margin="80, 67, 0, 0"></TextBlock>
+                                   Text="Diario" Foreground="Black"
+                                   FontSize="15" FontFamily="Montserrat"
+                                   VerticalAlignment="Top" HorizontalAlignment="Left"
+                                   Height="20" Width="90" Margin="80, 67, 0, 0"></TextBlock>
                         <TextBlock Grid.Column="0"
-                               Text="Semanal" Foreground="Black"
-                               FontSize="15" FontFamily="Montserrat"
-                               VerticalAlignment="Top" HorizontalAlignment="Left"
-                               Height="20" Width="90" Margin="80, 97, 0, 0"></TextBlock>
+                                   Text="Semanal" Foreground="Black"
+                                   FontSize="15" FontFamily="Montserrat"
+                                   VerticalAlignment="Top" HorizontalAlignment="Left"
+                                   Height="20" Width="90" Margin="80, 97, 0, 0"></TextBlock>
                         <TextBlock Grid.Column="0"
-                               Text="Mensual" Foreground="Black"
-                               FontSize="15" FontFamily="Montserrat"
-                               VerticalAlignment="Top" HorizontalAlignment="Left"
-                               Height="20" Width="90" Margin="80, 127, 0, 0"></TextBlock>
+                                   Text="Mensual" Foreground="Black"
+                                   FontSize="15" FontFamily="Montserrat"
+                                   VerticalAlignment="Top" HorizontalAlignment="Left"
+                                   Height="20" Width="90" Margin="80, 127, 0, 0"></TextBlock>
                         <!--#endregion-->
                         <!--#region CheckBox-->
-                        <CheckBox Grid.Column="0" Name="CheckBoxDiario" IsChecked="False"
-                      VerticalAlignment="Top" HorizontalAlignment="Center" Margin="100, 70, 0, 0"
-                      Checked="CheckBoxProtocol16_Checked" Unchecked="CheckBoxProtocol16_Unchecked"></CheckBox>
-                        <CheckBox Grid.Column="0" Name="CheckBoxSemanal" IsChecked="False"
-                      VerticalAlignment="Top" HorizontalAlignment="Center" Margin="100, 100, 0, 0"
-                      Checked="CheckBoxProtocol32_Checked" Unchecked="CheckBoxProtocol32_Unchecked"></CheckBox>
-                        <CheckBox Grid.Column="0" Name="CheckBoxMensual" IsChecked="False"
-                      VerticalAlignment="Top" HorizontalAlignment="Center" Margin="100, 130, 0, 0"
-                      Checked="CheckBoxProtocol32_Checked" Unchecked="CheckBoxProtocol32_Unchecked"></CheckBox>
+                        <CheckBox Grid.Column="0"
+                                  Name="CheckBoxDiario"
+                                  VerticalAlignment="Top" HorizontalAlignment="Center" Margin="100, 70, 0, 0"
+                                  Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked"
+                                  IsChecked="False"></CheckBox>
+                        <CheckBox Grid.Column="0"
+                                  Name="CheckBoxSemanal"
+                                  VerticalAlignment="Top" HorizontalAlignment="Center" Margin="100, 100, 0, 0"
+                                  Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked"
+                                  IsChecked="False"></CheckBox>
+                        <CheckBox Grid.Column="0"
+                                  Name="CheckBoxMensual"
+                                  VerticalAlignment="Top" HorizontalAlignment="Center" Margin="100, 130, 0, 0"
+                                  Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked"
+                                  IsChecked="False"></CheckBox>
+                        <!--#endregion-->
+                        <!--#region Buttons-->
+                        <Button x:Name="Crear" Margin="0, 0, 0, 30" Grid.Column="2"
+                                Width="80" Height="25" Background="#507ED6" BorderBrush="#007ED6"
+                                HorizontalAlignment="Center" VerticalAlignment="Bottom"
+                                Style="{DynamicResource ButtonStyle}" Click="Crear_Click">
+                            <TextBlock Text="Iniciar Tarea" Foreground="White" FontSize="13"></TextBlock>
+                        </Button>
                         <!--#endregion-->
                     </Grid>
                 </Border>
                 <Border Grid.Column="1"
                         BorderThickness="5" BorderBrush="AliceBlue">
-                    <Grid>
-
-                    </Grid>
+                    <StackPanel>
+                        <Frame x:Name="FramePage" Height="230" NavigationUIVisibility="Hidden"/>
+                    </StackPanel>
                 </Border>
             </Grid>
         </Grid>

@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Fde\Documents\C#\SBackUp\SBackUp\obj\Debug\
+D:\C#\SBackUp\SBackUp\obj\Debug\
 SBackUp
 none
 false
 DEBUG;TRACE
-C:\Users\Fde\Documents\C#\SBackUp\SBackUp\App.xaml
-2-450435373
+D:\C#\SBackUp\SBackUp\App.xaml
+51377613949
 
-142080589627
+171791788421
 14-1175798665
-CreateWindows.xaml;InitBackUp.xaml;
+CreateWindows.xaml;DailyPage.xaml;InitBackUp.xaml;MonthlyPage.xaml;WeeklyPage.xaml;
 
 False
 
