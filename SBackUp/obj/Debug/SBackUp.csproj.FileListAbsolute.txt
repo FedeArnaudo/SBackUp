@@ -38,3 +38,9 @@ D:\C#\SBackUp\SBackUp\obj\Debug\WeeklyPage.baml
 D:\C#\SBackUp\SBackUp\obj\Debug\SBackUp.csproj.AssemblyReference.cache
 D:\C#\SBackUp\SBackUp\obj\Debug\MonthlyPage.g.cs
 D:\C#\SBackUp\SBackUp\obj\Debug\MonthlyPage.baml
+C:\Users\Fde\Documents\C#\SBackUp\SBackUp\obj\Debug\DailyPage.g.cs
+C:\Users\Fde\Documents\C#\SBackUp\SBackUp\obj\Debug\MonthlyPage.g.cs
+C:\Users\Fde\Documents\C#\SBackUp\SBackUp\obj\Debug\WeeklyPage.g.cs
+C:\Users\Fde\Documents\C#\SBackUp\SBackUp\obj\Debug\DailyPage.baml
+C:\Users\Fde\Documents\C#\SBackUp\SBackUp\obj\Debug\MonthlyPage.baml
+C:\Users\Fde\Documents\C#\SBackUp\SBackUp\obj\Debug\WeeklyPage.baml
